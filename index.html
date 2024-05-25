@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nákladní kolo Brno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fffdfa; /* Lighter yellowish tint */
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: justify;
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px 0; /* Added vertical margins */
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px; /* Added margin below image */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin: 10px 0;
+            text-align: justify;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px; /* Added margin below form */
+        }
+        label {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1.2em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        @media (min-width: 768px) {
+            .header {
+                flex-direction: row;
+                justify-content: flex-start; /* Align items to left */
+                text-align: left;
+                align-items: center;
+            }
+            img {
+                max-width: 50%;
+                height: auto;
+            }
+            h1 {
+                margin-left: 20px;
+                max-width: 50%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./kolo-header.jpeg" alt="Riese & Müller Packster 70">
+            <h1>Nákladní kolo Brno</h1>
+        </div>
+        <div class="content">
+            <p>Máme dvě děti a žijeme v Brně. Jezdit po městě autem nechceme,
+            tak jsme si pořídili nákladní kolo. Oproti autu je ve městě
+            praktičtější a je to větší zábava. Nevyužijeme ho každý den,
+            a tak ti ho můžeme půjčit. Ozvi se nám a domluvíme se. Cena na den
+            je 500 Kč nebo podle domluvy. Vyzvednutí kousek od ulice Šumavská.</p>
+
+            <p>Kolo je značky Riese & Müller, model Packster 70. Můžeme k němu
+            půjčit stříšku proti dešti a slunci. Má silný motor a dobré převody
+            takže vyjede i hodně prudké kopce. Uveze dvě děti, jednoho lehkého
+            dospělého nebo opravdu velký nákup.</p>
+
+            <p>Zanech nám na sebe kontakt, ozveme se ti a domluvíme se na půjčení.</p>
+
+            <p style="text-align: right;">Šimonkovi</p>
+
+            <form>
+                <label for="firstName">Jméno</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Příjmení</label>
+                <input type="text" id="lastName" name="lastName" required>
+                
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="message">
+                    Kdy by sis chtěl kolo půjčit?<br/>
+                    Případně cokoliv dalšího co bys nám chtěl vzkázat.
+                </label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Odeslat</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
